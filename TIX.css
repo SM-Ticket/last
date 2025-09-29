@@ -1,0 +1,672 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background: #1f1f1f;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+
+.weMotix-text {
+    height: 40px; 
+}
+
+
+.brand-logo {
+    width: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #0057b3;
+    border-radius: 5px;
+}
+
+.tickets-container {
+    width: 55%;
+    margin: 40px auto;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.movie-card {
+    display: flex;
+    align-items: center;
+    background: #1f1f1f;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+    height: 180px;
+    width: 100%;
+}
+
+.movie-card:hover {
+    transform: scale(1.02);
+}
+
+.movie-poster {
+    width: 100px; 
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.movie-details {
+    flex: 1;
+    text-align: left;
+}
+
+
+.title-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.movie-rating {
+    width: 30px;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.movie-date {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+
+.showtimes {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px; 
+}
+
+.time-btn {
+    background: #0057b3;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.time-btn:hover {
+    background: #ffd700;
+    color: black;
+}
+
+
+.trailer-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-content {
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+iframe {
+    width: 100%;
+    height: 340px;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+main {
+    flex: 1; 
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+    margin-top: auto; 
+
+}
+.social-icons img {
+    width: 40px;
+    margin: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+
+
+.select-tickets-container {
+    background: #1f1f1f; 
+    color: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    text-align: left; 
+    overflow: hidden; 
+}
+
+
+
+.ticket-selection {
+    margin-top: 20px;
+}
+
+.movie-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    margin-bottom: 20px;
+}
+
+.movie-poster {
+    width: 150px;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.movie-details {
+    flex: 1;
+}
+
+.movie-title {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.movie-time {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ccc; 
+}
+
+.time-options {
+    margin-top: 20px;
+}
+
+.time-btn {
+    background: #0057b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+.time-btn:hover {
+    background: #ffd700;
+    color: black;
+}
+
+
+.ticket-options {
+    margin-top: 30px;
+}
+
+.ticket-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #2a2a2a; 
+    border-radius: 8px;
+}
+
+.ticket-row span {
+    font-size: 16px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity button {
+    background: #0057b3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.quantity button:hover {
+    background: #ffd700;
+    color: black;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background: #121212;
+    color: white;
+}
+
+.next-btn {
+    display: inline-block;
+    background: #0057b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.next-btn:hover {
+    background: #ffd700;
+    color: black;
+}
+.payment-mode {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.payment-mode p {
+    margin: 5px 0;
+    color: #ffffff; 
+}
+
+.payment-mode strong {
+    color: #ffffff; 
+}
+ #logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#logout-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1366px) {
+    
+    html, body {
+        font-size: 11px; 
+        padding: 0; 
+        margin: 0; 
+        overflow-x: hidden; 
+        height: 100%; 
+        display: flex;
+        flex-direction: column; 
+    }
+
+   
+    main {
+        flex: 1; 
+        overflow: hidden; 
+    }
+
+    .select-tickets-container {
+        background: #1f1f1f; 
+        color: white; 
+        padding: 20px; 
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+        width: 90%; 
+        max-width: 1500px; 
+        margin: 10px auto; 
+        text-align: left;
+        height: calc(100vh - 150px); 
+        overflow-y: auto; 
+    }
+
+  
+    .movie-info {
+        display: flex;
+        flex-direction: row; 
+        align-items: flex-start; 
+        gap: 10px;
+        margin-bottom: 10px; 
+    }
+
+   
+    .movie-poster {
+        width: 90px; 
+        height: auto; 
+        border-radius: 5px; 
+        object-fit: cover; 
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Movie Details */
+    .movie-details {
+        flex: 1; /* Allow details to take up remaining space */
+        text-align: left; /* Align text to the left */
+    }
+
+    .movie-title {
+        font-size: 13px; /* Reduce title size */
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .movie-time {
+        font-size: 11px; /* Reduce time size */
+        margin-bottom: 3px;
+        color: #ccc; /* Subtle text color */
+    }
+
+    /* Time Options */
+    .time-options {
+        margin-top: 5px;
+        display: flex;
+        justify-content: flex-start; /* Align buttons to the left */
+        gap: 5px; /* Reduce spacing between buttons */
+    }
+
+    .time-btn {
+        font-size: 11px; /* Reduce button size */
+        padding: 4px 6px; /* Adjust padding */
+        border-radius: 4px;
+    }
+
+    /* Ticket Options */
+    .ticket-options {
+        margin-top: 8px; /* Reduce margin */
+    }
+
+    .ticket-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px; /* Reduce padding */
+        background: #2a2a2a; /* Slightly lighter background for rows */
+        border-radius: 5px;
+        margin-bottom: 5px; /* Reduce spacing between rows */
+    }
+
+    .quantity {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .quantity input {
+        width: 30px; /* Further reduce input width */
+        text-align: center;
+    }
+
+    /* Payment Section */
+    .payment-mode {
+        margin-top: 5px; /* Reduce margin */
+        font-size: 11px; /* Reduce font size */
+        text-align: left; /* Align text to the left */
+    }
+
+    .payment-mode p {
+        margin: 2px 0; /* Reduce spacing */
+    }
+
+    .payment-mode strong {
+        font-size: 11px; /* Reduce font size */
+    }
+
+    /* Next Button */
+    .next-btn {
+        width: 7%; /* Full width for better usability */
+        text-align: center;
+        padding: 5px 8px; /* Further reduce padding */
+        font-size: 11px; /* Reduce font size */
+        margin-top: 8px; /* Reduce margin */
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* General Styles */
+    html, body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 0 10px; /* Add padding for smaller screens */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        height: auto; /* Allow vertical scrolling */
+    }
+
+    /* Navigation Bar */
+    .nav-container {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: center; /* Center align the content */
+        gap: 15px; /* Add spacing between logo and links */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Add spacing between links */
+        text-align: center; /* Center align the links */
+    }
+
+    .nav-links li a {
+        padding: 10px 20px; /* Increase padding for better touch targets */
+        font-size: 16px; /* Adjust font size for readability */
+        width: 100%; /* Make links take full width */
+        display: block; /* Ensure links are block elements */
+    }
+
+    /* Tickets Container */
+    .tickets-container {
+        width: 100%; /* Use full width for smaller screens */
+        margin: 20px auto; /* Adjust margins */
+    }
+
+    h2 {
+        font-size: 22px; /* Adjust heading size */
+        text-align: center; /* Center align the heading */
+    }
+
+    /* Movie Info */
+    .movie-info {
+        flex-direction: column; /* Stack poster and details vertically */
+        align-items: center; /* Center align the content */
+        gap: 15px; /* Add spacing between poster and details */
+    }
+
+    .movie-poster {
+        width: 100%; /* Full width for poster */
+        height: auto; /* Adjust height proportionally */
+        margin-bottom: 15px; /* Add spacing below the poster */
+    }
+
+    .movie-details {
+        text-align: center; /* Center align the details */
+    }
+
+    .movie-title {
+        font-size: 20px; /* Adjust title size */
+    }
+
+    .movie-time {
+        font-size: 14px; /* Adjust time size */
+    }
+
+    /* Time Options */
+    .time-options {
+        text-align: center; /* Center align the buttons */
+    }
+
+    .time-btn {
+        font-size: 14px; /* Adjust button size */
+        padding: 8px 12px; /* Adjust padding */
+        margin: 5px; /* Add spacing between buttons */
+    }
+
+    /* Ticket Options */
+    .ticket-options {
+        margin-top: 20px;
+    }
+
+    .ticket-row {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px; /* Add spacing between elements */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .quantity {
+        justify-content: space-between; /* Space out buttons and input */
+        width: 100%; /* Full width for better alignment */
+    }
+
+    .quantity input {
+        width: 60px; /* Adjust input width */
+    }
+
+    /* Next Button */
+    .next-btn {
+        width: 100%; /* Full width for better usability */
+        text-align: center; /* Center align the text */
+    }
+
+    /* Payment Mode */
+    .payment-mode {
+        font-size: 14px; /* Adjust font size */
+        text-align: center; /* Center align the text */
+    }
+
+    .payment-mode p {
+        margin: 5px 0;
+    }
+
+    .payment-mode strong {
+        font-size: 16px; /* Highlight the GCash number */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px; /* Reduce footer padding */
+    }
+
+    .social-icons img {
+        width: 30px; /* Reduce icon size */
+        margin: 5px; /* Adjust spacing */
+    }
+
+    .footer-links a {
+        font-size: 14px; /* Reduce font size */
+    }
+
+     #logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#logout-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+}

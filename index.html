@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WeMotix - Movie Ticketing</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="icon_favicon.png">
+    </head>
+    
+
+</head>
+<body>
+
+    
+     <header>
+        <nav>
+            <div class="nav-container container d-flex justify-content-center align-items-center gap-4">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="wemotix_logo.png" alt="WeMotix Logo" class="weMotix-text">
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="purchasehistory.html">History</a></li>
+                </ul>
+
+                 <button id="logout-btn">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section class="tabs">
+            <button id="nowShowingBtn" class="btn btn-outline-light active">Now Showing</button>
+            <button id="comingSoonBtn" class="btn btn-outline-light">Coming Soon</button>
+            
+        </section>
+
+        
+        <section id="moviesSection">
+            
+            <div id="now-showing-grid-container" class="grid-container">
+                <div class="movie-card"><img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/518816941_719309574256127_6990825059013650584_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=OjctVVw9TCsQ7kNvwGHqIXY&_nc_oc=AdmuNsItl4CDv9EJ19y7qrk7ASIs6kXZcjSMQe15WkXb0C4xB3vEVXzsdwBvo9OtJC2nxsGEqar3vJchaFN9XI-6&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&oh=03_Q7cD3QHyX3hsQN_MlVmyGdSPpNDbvCTsi9OkaJyF2iHX3sHNig&oe=69021214" alt=""><h3>Movie 1</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/513762371_1595472048077247_3433122389118415619_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=gZ3erRPcyxIQ7kNvwG7DFz1&_nc_oc=AdkZh9YLLxUapTKngXYB3c5dq3CQAGOK9OsFLh9VxlLyQLF1jFzUK8wNfiVtfW_R3DjZ2h7Eqa9Xa7yaZONt2EKP&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD3QG_qgoRL6_2D0hXwZINri94z2DqOEoXCYtUXmFRjEwsPw&oe=690212EC" alt=""><h3>Movie 2</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/553589147_771081609250310_8814776343143880197_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8VV-6GZ5CyUQ7kNvwFizEkK&_nc_oc=AdkICaTdL1DWH1BWTIf-OEhBLc-UKhsCFis81BemTn_yucj1KlCKI27ZnD0AGDG-GfMqrfAu7xxDvCbSVM_xw_aM&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&oh=03_Q7cD3QHLn051WeYFj0p5sHEkJjamKdvUzHrKyhHtYcTMgqGgrg&oe=690202FD" alt=""><h3>Movie 3</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/489226377_1028143519256320_718842453128986250_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=q54AyCSTwCEQ7kNvwEbCbSK&_nc_oc=AdmFM2hTZ9Uhr2bS8aZuU_d3SZXilBJAI_9U-JUPvy-fFI1YGRwk8PfE6pYmuA42rFWp6TfZbvoWtVnZA2QusXCu&_nc_zt=23&_nc_ht=scontent.fmnl4-6.fna&oh=03_Q7cD3QE9-mtNwK9xbk3b22bPZu-tXhyPTGhOnKyHrdrqlmr4oQ&oe=69022CEC" alt=""><h3>Movie 4</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/467474745_1327882615040586_8300159585107369465_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=2BjMBcXupfwQ7kNvwEKYlhk&_nc_oc=Adnr8D3x77oBnpNgZ8nFLXt2mknAygtezciGX2I7sHEg6NKObmXYpSCA3GZsg-1xyujfVIABQfK5sTSKNG8dS7G1&_nc_zt=23&_nc_ht=scontent.fmnl4-6.fna&oh=03_Q7cD3QEb8GhBqobVcmjcgBN245Lq4hqeVhgqNhEBkBM9rAMEEA&oe=69021E87" alt=""><h3>Movie 5</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/462637230_3436579009971116_1717716646880604985_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=BjxCMPnkmXoQ7kNvwGJJ_Nu&_nc_oc=AdmXJZuT2L8ClSGWL7TIH3mm-8tMns6Fd8jJKmMnTxLhEQrdDk44UrHkSGXnX5JrnDsApj7n5B8belKDD3NTav6X&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&oh=03_Q7cD3QE8Yz3rcITgnxy8_-x1-0cUmrz6XjMjof640ILVBW6cpA&oe=69021D98" alt=""><h3>Movie 6</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/482533756_1188742672928892_4943216260943031034_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=g2ztzRcoWpAQ7kNvwEJONaY&_nc_oc=AdmNmHkpu36wvmnp_MrsJRaQonqaS4wWPeAFXSzK-NKa91UxmT5aM8p7-5-6Yc9RWZ7pX-aR0q-TQ1rDMlH3G5AW&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QEv8UB10HF5OFD1STON29pYfbi9zFqvgHQnifPfgJnsDw&oe=69022180" alt=""><h3>Movie 7</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/551132923_1752025425518749_2848970462013211813_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AaJi_f6vNDIQ7kNvwHsN8yJ&_nc_oc=AdkVcGhbASmC5iTYkqoTgCZ25_AfmH1Qggf3SlkHGG0VeSwPEHu4xI3fjqWXhd6bXpQbrLMglb5s0rifd-xrRZDp&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QHUIg26ka7Y5Tvb0af8iimbjKBAI-c5aVFNjGdoJ0h8NQ&oe=690203F7" alt=""><h3>Movie 8</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/548091345_1433925767897515_9177692878586081483_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=n6lDktsXBz0Q7kNvwHdDCud&_nc_oc=AdmSi6boS29Qg1MiydedJwzpdvxqrQC8xR4S_ce1X9OxpolEcLaFh1w38B5YqsJC-f6_JteqNR4qMmID7Nit-54E&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QEph5YY031Ar_minvccZ9tF3DCgdMbJ7p2DjvRK9ZjerQ&oe=69023147" alt=""><h3>Movie 9</h3><button class="buy-ticket">Buy Tickets</button></div>
+                <div class="movie-card"><img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/552895418_806961905011154_3339892275471126328_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=OlEdJMPCcvMQ7kNvwFqNaef&_nc_oc=Adla_YOajdnHek0IxyjwSUcg73SbU_55Wt-dgrSckCTNivIsfPwwf5y0JW8f3FQiSB7ojeZRO4tl14jhD28b5yVd&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD3QHgwEiKSDA_ssRVWkzRJ_i8h-vytLE24UbljmF0hXA4Yg&oe=69021C20" alt=""><h3>Movie 10</h3><button class="buy-ticket">Buy Tickets</button></div>
+            </div>
+
+            
+            <div id="coming-soon-grid-container" class="grid-container" style="display: none;">
+                <div class="movie-card">
+                    <img src="coming1.jpg" alt="">
+                    <h3>Coming Soon 1</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="coming2.jpg" alt="">
+                    <h3>Coming Soon 2</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="coming3.jpg" alt="">
+                    <h3>Coming Soon 3</h3>
+                </div>
+            </div>
+        </section>
+
+        <div class="view-all-container">
+            <a href="movies.html" class="view-all-btn">View All Movies</a>
+        </div>
+      
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="ig.svg" alt="Instagram"></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="yt.svg" alt="YouTube"></a>
+            <a href="#"><img src="tiktok.svg" alt="TikTok"></a>
+        </div>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Conditions</a> |
+            <a href="privacy.html">Privacy Notice</a>
+        </div>
+        <p>&copy; 2025 WeMotix. All rights reserved.</p>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+<script>
+  if (!localStorage.getItem("redirectedOnce")) {
+    localStorage.setItem("redirectedOnce", "true");
+
+    window.location.href = "new-landing.html";
+  }
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

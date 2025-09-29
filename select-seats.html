@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeMotix | Select Seats</title>
+    <link rel="stylesheet" href="select-seats.css">
+    <link rel="icon" type="image/png" href="icon_favicon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="wemotix_logo.png" alt="WeMotix Logo" class="weMotix-text">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="purchasehistory.html">History</a></li>
+                </ul>
+
+                 <button id="logout-btn">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="select-seats-container">
+        
+        
+        <h2>Select Seats</h2>
+        <div class="seat-legend">
+            <span class="seat your-seat"></span> Your Seat
+            <span class="seat available"></span> Available
+            <span class="seat sold"></span> Sold
+        </div>
+        <div class="screen">SCREEN</div>
+        <div class="seat-grid">
+        </div>
+        <div class="button-group">
+            <button class="confirm-btn" onclick="confirmSelection()">Confirm Selection</button>
+        </div>
+        <div class="button-group">
+            <button class="back-btn" onclick="history.back()">Back</button>
+        </div>
+    </main>
+
+    
+
+    <script>
+const urlParams = new URLSearchParams(window.location.search);
+const ticketQuantity = parseInt(urlParams.get("quantity")) || 1; 
+const selectedTime = urlParams.get("time") || "N/A"; 
+const movieName = urlParams.get("movie") || "Unknown Movie"; 
+
+let selectedSeats = 0; 
+
+const seatGrid = document.querySelector('.seat-grid');
+const rows = ['A', 'B', 'C', 'D', 'E']; 
+
+rows.forEach(row => {
+    const rowLabel = document.createElement('div');
+    rowLabel.classList.add('seat-row-label');
+    rowLabel.textContent = `${row} -`;
+    seatGrid.appendChild(rowLabel);
+
+    const seatRow = document.createElement('div');
+    seatRow.classList.add('seat-row');
+    for (let i = 1; i <= 20; i++) { 
+        const seat = document.createElement('span');
+        seat.classList.add('seat', 'available');
+        seat.textContent = i;
+        seat.id = `${row}-${i}`; 
+        seat.setAttribute('onclick', 'selectSeat(this)');
+        seatRow.appendChild(seat);
+    }
+    seatGrid.appendChild(seatRow);
+});
+
+function selectSeat(seat) {
+    if (seat.classList.contains('available') && selectedSeats < ticketQuantity) {
+        seat.classList.remove('available');
+        seat.classList.add('your-seat');
+        selectedSeats++;
+    } else if (seat.classList.contains('your-seat')) {
+        seat.classList.remove('your-seat');
+        seat.classList.add('available');
+        selectedSeats--;
+    } else if (selectedSeats >= ticketQuantity) {
+        alert(`You can only select ${ticketQuantity} seats.`);
+    }
+}
+
+const confirmedSeatsKey = `${movieName}-${selectedTime}`;
+const confirmedSeats = JSON.parse(localStorage.getItem(confirmedSeatsKey)) || [];
+
+function markConfirmedSeats() {
+    confirmedSeats.forEach(seatId => {
+        const seatElement = document.getElementById(seatId);
+        if (seatElement) {
+            seatElement.classList.remove('available');
+            seatElement.classList.add('sold');
+            seatElement.removeAttribute('onclick'); 
+        }
+    });
+}
+
+
+markConfirmedSeats();
+const paymentPhoto = localStorage.getItem("paymentPhoto");
+
+if (paymentPhoto) {
+    const imgElement = document.createElement("img");
+    imgElement.src = paymentPhoto;
+    imgElement.alt = "Payment Confirmation";
+
+  
+
+    document.body.appendChild(photoContainer);
+} else {
+    console.log("No payment photo found in localStorage.");
+}
+
+function confirmSelection() {
+    const ticketPrice = 600; 
+    const totalPrice = ticketPrice * ticketQuantity;
+
+    
+    const selectedSeatsArray = Array.from(document.querySelectorAll(".your-seat")).map(seat => {
+        const row = seat.parentElement.previousElementSibling.textContent.trim().replace(" -", "");
+        const seatNumber = seat.textContent.trim();
+        return `${row}-${seatNumber}`;
+    });
+
+    confirmedSeats.push(...selectedSeatsArray);
+    localStorage.setItem(confirmedSeatsKey, JSON.stringify(confirmedSeats));
+
+    const selectedSeats = selectedSeatsArray.join(",");
+    location.href = `confirm-selection.html?quantity=${ticketQuantity}&time=${encodeURIComponent(selectedTime)}&movie=${encodeURIComponent(movieName)}&total=${totalPrice}&seats=${selectedSeats}`;
+}
+
+const clearReservedSeatsTimeout = 60000000000000000000000000    ; // 10 minutes in milliseconds
+
+function autoClearReservedSeats() {
+    localStorage.removeItem(confirmedSeatsKey); // Remove reserved seats from localStorage
+    console.log("Reserved seats have been cleared automatically.");
+}
+
+setTimeout(autoClearReservedSeats, clearReservedSeatsTimeout);
+
+    </script>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="ig.svg" alt="Instagram"></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="yt.svg" alt="YouTube"></a>
+            <a href="#"><img src="tiktok.svg" alt="TikTok"></a>
+        </div>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Conditions</a> |
+            <a href="privacy.html">Privacy Notice</a>
+        </div>
+        <p>&copy; 2025 WeMotix. All rights reserved.</p>
+    </footer>
+</body>
+</html>

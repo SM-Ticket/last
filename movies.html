@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeMotix | Movies</title>
+    <link rel="stylesheet" href="movies.css">
+    <link rel="icon" type="image/png" href="icon_favicon.png">
+</head>
+<body class="movies-page">
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="wemotix_logo.png" alt="WeMotix Logo" class="weMotix-text">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html" class="active">Movies</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="purchasehistory.html">History</a></li>
+                </ul>
+
+                 <button id="logout-btn">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="now-showing-title">Now Showing</h2>
+
+        <section class="movie-grid">
+            <div class="movie-card" onclick="openPopup('movie1')">
+                <img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/518816941_719309574256127_6990825059013650584_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=OjctVVw9TCsQ7kNvwGHqIXY&_nc_oc=AdmuNsItl4CDv9EJ19y7qrk7ASIs6kXZcjSMQe15WkXb0C4xB3vEVXzsdwBvo9OtJC2nxsGEqar3vJchaFN9XI-6&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&oh=03_Q7cD3QHyX3hsQN_MlVmyGdSPpNDbvCTsi9OkaJyF2iHX3sHNig&oe=69021214" alt="Movie 1" class="movie-poster">
+                <h3 class="movie-title">Deadpool & Wolverine</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie2')">
+                <img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/513762371_1595472048077247_3433122389118415619_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=gZ3erRPcyxIQ7kNvwG7DFz1&_nc_oc=AdkZh9YLLxUapTKngXYB3c5dq3CQAGOK9OsFLh9VxlLyQLF1jFzUK8wNfiVtfW_R3DjZ2h7Eqa9Xa7yaZONt2EKP&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD3QG_qgoRL6_2D0hXwZINri94z2DqOEoXCYtUXmFRjEwsPw&oe=690212EC" alt="Movie 2" class="movie-poster">
+                <h3 class="movie-title">Inside Out 2</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie3')">
+                <img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/553589147_771081609250310_8814776343143880197_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8VV-6GZ5CyUQ7kNvwFizEkK&_nc_oc=AdkICaTdL1DWH1BWTIf-OEhBLc-UKhsCFis81BemTn_yucj1KlCKI27ZnD0AGDG-GfMqrfAu7xxDvCbSVM_xw_aM&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&oh=03_Q7cD3QHLn051WeYFj0p5sHEkJjamKdvUzHrKyhHtYcTMgqGgrg&oe=690202FD" alt="Movie 3" class="movie-poster">
+                <h3 class="movie-title">The Wild Robot</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie4')">
+                <img src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/489226377_1028143519256320_718842453128986250_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=q54AyCSTwCEQ7kNvwEbCbSK&_nc_oc=AdmFM2hTZ9Uhr2bS8aZuU_d3SZXilBJAI_9U-JUPvy-fFI1YGRwk8PfE6pYmuA42rFWp6TfZbvoWtVnZA2QusXCu&_nc_zt=23&_nc_ht=scontent.fmnl4-6.fna&oh=03_Q7cD3QE9-mtNwK9xbk3b22bPZu-tXhyPTGhOnKyHrdrqlmr4oQ&oe=69022CEC" alt="Movie 4" class="movie-poster">
+                <h3 class="movie-title">Beetlejuice Beetlejuice</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie5')">
+                <img src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/467474745_1327882615040586_8300159585107369465_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=2BjMBcXupfwQ7kNvwEKYlhk&_nc_oc=Adnr8D3x77oBnpNgZ8nFLXt2mknAygtezciGX2I7sHEg6NKObmXYpSCA3GZsg-1xyujfVIABQfK5sTSKNG8dS7G1&_nc_zt=23&_nc_ht=scontent.fmnl4-6.fna&oh=03_Q7cD3QEb8GhBqobVcmjcgBN245Lq4hqeVhgqNhEBkBM9rAMEEA&oe=69021E87" alt="Movie 5" class="movie-poster">
+                <h3 class="movie-title">Mufasa: The Lion King</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie6')">
+                <img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/462637230_3436579009971116_1717716646880604985_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=BjxCMPnkmXoQ7kNvwGJJ_Nu&_nc_oc=AdmXJZuT2L8ClSGWL7TIH3mm-8tMns6Fd8jJKmMnTxLhEQrdDk44UrHkSGXnX5JrnDsApj7n5B8belKDD3NTav6X&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&oh=03_Q7cD3QE8Yz3rcITgnxy8_-x1-0cUmrz6XjMjof640ILVBW6cpA&oe=69021D98" alt="Movie 6" class="movie-poster">
+                <h3 class="movie-title">Venom: The Last Dance</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie7')">
+                <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/482533756_1188742672928892_4943216260943031034_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=g2ztzRcoWpAQ7kNvwEJONaY&_nc_oc=AdmNmHkpu36wvmnp_MrsJRaQonqaS4wWPeAFXSzK-NKa91UxmT5aM8p7-5-6Yc9RWZ7pX-aR0q-TQ1rDMlH3G5AW&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QEv8UB10HF5OFD1STON29pYfbi9zFqvgHQnifPfgJnsDw&oe=69022180" alt="Movie 7" class="movie-poster">
+                <h3 class="movie-title">Kraven the Hunter
+</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie8')">
+                <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/551132923_1752025425518749_2848970462013211813_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AaJi_f6vNDIQ7kNvwHsN8yJ&_nc_oc=AdkVcGhbASmC5iTYkqoTgCZ25_AfmH1Qggf3SlkHGG0VeSwPEHu4xI3fjqWXhd6bXpQbrLMglb5s0rifd-xrRZDp&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QHUIg26ka7Y5Tvb0af8iimbjKBAI-c5aVFNjGdoJ0h8NQ&oe=690203F7" alt="Movie 8" class="movie-poster">
+                <h3 class="movie-title">Afterburn</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie9')">
+                <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/548091345_1433925767897515_9177692878586081483_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=n6lDktsXBz0Q7kNvwHdDCud&_nc_oc=AdmSi6boS29Qg1MiydedJwzpdvxqrQC8xR4S_ce1X9OxpolEcLaFh1w38B5YqsJC-f6_JteqNR4qMmID7Nit-54E&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QEph5YY031Ar_minvccZ9tF3DCgdMbJ7p2DjvRK9ZjerQ&oe=69023147" alt="Movie 9" class="movie-poster">
+                <h3 class="movie-title">Minamahal</h3>
+            </div>
+            <div class="movie-card" onclick="openPopup('movie10')">
+                <img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/552895418_806961905011154_3339892275471126328_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=OlEdJMPCcvMQ7kNvwFqNaef&_nc_oc=Adla_YOajdnHek0IxyjwSUcg73SbU_55Wt-dgrSckCTNivIsfPwwf5y0JW8f3FQiSB7ojeZRO4tl14jhD28b5yVd&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD3QHgwEiKSDA_ssRVWkzRJ_i8h-vytLE24UbljmF0hXA4Yg&oe=69021C20" alt="Movie 10" class="movie-poster">
+                <h3 class="movie-title">One Battle After Another</h3>
+            </div>
+        </section>
+    </main>
+
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <iframe id="movie-trailer" class="popup-video" src="" frameborder="0" allowfullscreen></iframe>
+            <div class="popup-details">
+                <h3 id="popup-title"></h3>
+                <p id="popup-description"></p>
+                <a href="buy-tickets.html" class="buy-ticket">Buy Tickets</a>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="social-icons">
+        <a href="#"><img src="fb.svg" alt="Facebook"></a>
+        <a href="#"><img src="ig.svg" alt="Instagram"></a>
+        <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="yt.svg" alt="YouTube"></a>
+        <a href="#"><img src="tiktok.svg" alt="TikTok"></a>
+    </div>
+    </div>
+    <div class="footer-links">
+        <a href="terms.html">Terms and Conditions</a> |
+        <a href="privacy.html">Privacy Notice</a>
+    </div>
+    <p>&copy; 2025 WeMotix. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

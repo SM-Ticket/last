@@ -1,0 +1,150 @@
+98% of storage used … If you run out of space, you can't save to Drive or use Gmail. Get 30 GB of storage for ₱49 ₱10/month for 3 months.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="wemotix_logo.png" alt="WeMotix Logo" class="weMotix-text">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="purchasehistory.html">History</a></li>
+                </ul>
+
+                 <button id="logout-btn">Log Out</button>
+            </div>
+        </nav>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeMotix | Confirm Booking</title>
+    <link rel="stylesheet" href="confirm-selection.css">
+    <link rel="icon" type="image/png" href="icon_favicon.png">
+  
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Ho7Zo4hfgnsc0YH3c",
+      });
+   })();
+</script>
+</head>
+<body>
+    <main class="confirm-container">
+        <div class="ticket">
+            <h2 class="ticket-title">Booking Summary</h2>
+            <div class="ticket-details">
+                <h3><strong>!!AFTER CONFIRMING PLEASE GO TO COUNTER FOR PAYMENT!!</strong>
+                <p><strong>Movie:</strong> <span id="movie-name"></span></p>
+                <p><strong>Number of Tickets:</strong> <span id="ticket-count"></span></p>
+                <p><strong>Time:</strong> <span id="selected-time"></span></p>
+                <p><strong>Total Price:</strong> <span id="total-price"></span></p>
+                <p><strong>Selected Seats:</strong></p>
+                <ul id="selected-seats"></ul>
+            </div>
+            <div class="email-section">
+                <label for="email"><strong>Email Address:</strong></label>
+                <input type="email" id="email" placeholder="Enter your Gmail address">
+            </div>
+            <div class="ticket-actions">
+                <button class="confirm-btn" onclick="confirmBooking()">Confirm Booking</button>
+                <button class="back-btn" onclick="goBack()">Go Back</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    function savePurchaseHistory(movie, time, quantity, total) {
+        const purchaseHistory = JSON.parse(localStorage.getItem("purchaseHistory")) || [];
+        const newPurchase = { movie, time, quantity, total };
+        purchaseHistory.push(newPurchase);
+        localStorage.setItem("purchaseHistory", JSON.stringify(purchaseHistory));
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const ticketQuantity = parseInt(urlParams.get("quantity")) || 0;
+    const selectedTime = urlParams.get("time") || "N/A";
+    const movieName = urlParams.get("movie") || "Unknown Movie";
+    const totalPrice = parseInt(urlParams.get("total")) || 0;
+    const seats = urlParams.get("seats") ? urlParams.get("seats").split(",") : [];
+
+    document.getElementById("movie-name").textContent = movieName;
+    document.getElementById("ticket-count").textContent = ticketQuantity;
+    document.getElementById("selected-time").textContent = selectedTime;
+    document.getElementById("total-price").textContent = `₱${totalPrice.toFixed(2)}`;
+    const selectedSeatsList = document.getElementById("selected-seats");
+    seats.forEach(seat => {
+        const li = document.createElement("li");
+        li.textContent = seat;
+        selectedSeatsList.appendChild(li);
+    });
+
+    function confirmBooking() {
+        const emailInput = document.getElementById("email").value.trim();
+
+        if (!emailInput) {
+            alert("Please enter your email address.");
+            return;
+        }
+
+        const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        if (!gmailRegex.test(emailInput)) {
+            alert("Please enter a valid Gmail address.");
+            return;
+        }
+
+        const emailData = {
+            to_email: emailInput,
+            movie_name: movieName,
+            ticket_quantity: ticketQuantity,
+            selected_time: selectedTime,
+            total_price: `₱${totalPrice.toFixed(2)}`,
+            selected_seats: seats.join(", ")
+        };
+
+        savePurchaseHistory(movieName, selectedTime, ticketQuantity, totalPrice);
+
+        emailjs.send("service_bw7zqaj", "template_7ta27o8", emailData)
+            .then(response => {
+                console.log("Email sent successfully:", response);
+                alert("Your booking has been confirmed and the ticket has been emailed to you!");
+                location.href = "index.html";
+            })
+            .catch(error => {
+                console.error("EmailJS Error:", error);
+                alert("Failed to send the email. Please try again.");
+            });
+    }
+
+    function goBack() {
+        history.back();
+    }
+</script>
+
+      
+      <footer>
+        <div class="social-icons">
+            <a href="#"><img src="fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="ig.svg" alt="Instagram"></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="yt.svg" alt="YouTube"></a>
+            <a href="#"><img src="tiktok.svg" alt="TikTok"></a>
+        </div>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Conditions</a> |
+            <a href="privacy.html">Privacy Notice</a>
+        </div>
+        <p>&copy; 2025 WeMotix. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

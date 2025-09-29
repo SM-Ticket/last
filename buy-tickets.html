@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeMotix | Buy Tickets</title>
+    <link rel="stylesheet" href="buy-tickets.css">
+    <link rel="icon" type="image/png" href="icon_favicon.png">
+    <script src="buy-tickets.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="wemotix_logo.png" alt="WeMotix Logo" class="weMotix-text">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="purchasehistory.html">History</a></li>
+                </ul>
+
+                 <button id="logout-btn">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="tickets-container">
+        <h2>Showtimes</h2>
+        <div class="movie-list">
+            
+            <div class="movie-card" data-trailer="https://youtu.be/73_1biulkYk?si=JzoU2b0tRCGXcaGW">
+                <img src="captain.jpg" alt="Deadpool & Wolverine" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="PG.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Deadpool & Wolverine</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="DeadpoolWolverine()">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" data-trailer="https://youtu.be/LEjhY15eCx0?si=sDPxjGsv_Xf5elGH">
+                <img src="superman.png" alt="Inside Out 2" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="PG.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Inside Out 2</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="location.href='InsideOut TIX.html'">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" data-trailer="https://youtu.be/67vbA5ZJdKQ?si=HcYOpNNnmMu0sewm">
+                <img src="jw.png" alt="The Wild Robot" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="PG.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">The Wild Robot</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="location.href='The Wild Robot TIX.html'">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="movie-card" data-trailer="https://youtu.be/As-vKW4ZboU?si=0XNWAF1r90B6zTw1">
+                <img src="dragon.png" alt="Beetlejuice Beetlejuice" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="PG.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Beetlejuice Beetlejuice</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="BeetlejuiceBeetlejuice()">Buy Now</button>
+                    </div>
+                </div>
+            </div>      
+
+
+            <div class="movie-card" data-trailer="https://youtu.be/o17MF9vnabg?si=yka1z7cNGMIHH6Kd">
+                <img src="4.png" alt="Mufasa: The Lion King" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="PG.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Mufasa: The Lion King</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="location.href='Mufasa TIX.html'">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" data-trailer="https://youtu.be/__2bjWbetsA?si=DCHGzG2RIz4ODovf">
+                <img src="untold.jpeg" alt="Venom: The Last Dance" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="R13.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Venom: The Last Dance</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="Venom()">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" data-trailer="https://youtu.be/I8gFw4-2RBM?si=5mMW_MOmaC1g-8gX">
+                <img src="balota.png" alt="Kraven the Hunter" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="R13.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Kraven the Hunter</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="Kraven()">Buy Now</button>                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" data-trailer="https://youtu.be/ZkEjle729tI?si=SRjKLI_quCV8A7LG">
+                <img src="care.png" alt="Afterburn" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="R16.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Afterburn</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="Afterburn()">Buy Now</button>               
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" data-trailer="https://youtu.be/TU2npMg7TkM?si=ZmecWj_tG6UEwV5h">
+                <img src="hla.png" alt="Minamahal" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="PG.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">Minamahal</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="Minamahal()">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" data-trailer="https://youtu.be/feOQFKv2Lw4?si=EAw5l5KKNiOSwTQC">
+                <img src="disapear.png" alt="One Battle After Another" class="movie-poster">
+                <div class="movie-details">
+                    <div class="title-rating">
+                        <img src="R16.png" alt="Rating" class="movie-rating">
+                        <h3 class="movie-title">One Battle After Another</h3>
+                    </div>
+                    <p class="movie-date"></p>
+                    <div class="showtimes">
+                        <button class="time-btn" onclick="One()">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add 8 more movies with unique posters, ratings, and times -->
+        </div>
+    </main>
+
+    <!-- Trailer Popup -->
+    <div class="trailer-popup" id="trailerPopup">
+        <div class="trailer-content">
+            <span class="close-btn" onclick="closeTrailer()">&times;</span>
+            <iframe id="trailerFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="ig.svg" alt="Instagram"></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="yt.svg" alt="YouTube"></a>
+            <a href="#"><img src="tiktok.svg" alt="TikTok"></a>
+        </div>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Conditions</a> |
+            <a href="privacy.html">Privacy Notice</a>
+        </div>
+        <p>&copy; 2025 WeMotix. All rights reserved.</p>
+    </footer>
+     
+    <script src="buy-tickets.js"></script>
+</body>
+</html>

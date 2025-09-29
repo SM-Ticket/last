@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeMotix | Cinemas</title>
+    <link rel="stylesheet" href="cinemas.css">
+    <link rel="icon" type="image/png" href="icon_favicon.png">
+</head>
+<body>
+
+    
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="wemotix_logo.png" alt="WeMotix Logo" class="weMotix-text">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="cinemas.html" class="active">Cinemas</a></li>
+                    <li><a href="purchasehistory.html">History</a></li>
+                </ul>
+
+                 <button id="logout-btn">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main class="cinema-container">
+        <h1>All Cinema Locations</h1>
+
+        <div class="cinema-list">
+
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="data:image/png;base64,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" alt="SM Angono Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Angono</a>
+                    <p>Manila East Road<br>Brgy San Isidro, 1930<br>Angono Rizal</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="baguio.png" alt="SM Baguio Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Baguio</a>
+                    <p>Luneta Hill<br>Upper Session Road<br>Baguio City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="caloocan.png" alt="SM Caloocan Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Caloocan</a>
+                    <p>Deparo Road Zone 15<br>Barangay 171 District 1<br>Bagumbong 1421, Caloocan City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="davao.png" alt="SM Davao Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Davao</a>
+                    <p>Quimpo Blvd. Ecoland Subd.<br>Brgy. Matina<br>Davao City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="eo.png" alt="SM East Ortigas Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM East Ortigas</a>
+                    <p>Avenue Extension<br>Brgy Sta. Lucia<br>Pasig City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="view.png" alt="SM Fairview Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Fairview</a>
+                    <p>Quirino Hi-way cor Regalado Av<br>Bgy Greater Lagro<br>Novaliches Quezon City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="gc.png" alt="SM Grand Central Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Grand Central</a>
+                    <p>Rizal Avenue Extension<br>Barangay 88 Zone 8 District II<br>Grace Park East, Caloocan City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="north.png" alt="SM North Edsa Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM North Edsa</a>
+                    <p>North EDSA PAG ASA I<br>Quezon City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="sangan.png" alt="SM Sangandaan Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Sangandaan</a>
+                    <p>Marcelo H Del Pilar St<br>Cor Samson Road Brgy 003<br>Caloocan City</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+
+            <div class="cinema-card">
+                <a href="buy-tickets.html"><img src="val.png" alt="SM Valenzuela Logo" class="cinema-logo"></a>
+                <div class="cinema-details">
+                    <a href="buy-tickets.html" class="cinema-name">SM Valenzuela</a>
+                    <p>McArthur Highway<br>Brgy Karuhatan Valenzuela Cityy</p>
+                    <a href="buy-tickets.html" class="see-playing">See What's Playing</a>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="ig.svg" alt="Instagram"></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="yt.svg" alt="YouTube"></a>
+            <a href="#"><img src="tiktok.svg" alt="TikTok"></a>
+        </div>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Conditions</a> |
+            <a href="privacy.html">Privacy Notice</a>
+        </div>
+        <p>&copy; 2025 WeMotix. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

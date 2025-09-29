@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="logsign.css" />
+  <script type="module" src="signup.js" defer></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <input type="text" id="signup-fullname" placeholder="Full Name" required />
+
+      <div class="contact-container">
+  <span class="country-code">+63</span>
+  <input type="tel" id="signup-contact" placeholder="9001234567" maxlength="10" pattern="[0-9]{10}" required />
+</div>
+
+      <input type="email" id="signup-email" placeholder="Email" required />
+
+      <div style="position: relative;">
+        <input type="password" id="signup-password" placeholder="Password" required />
+        <span class="toggle-password" onclick="togglePassword('signup-password')">👁️</span>
+      </div>
+
+      <div style="position: relative;">
+        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required />
+        <span class="toggle-password" onclick="togglePassword('signup-confirm-password')">👁️</span>
+      </div>
+
+      <button type="submit">Sign Up</button>
+      <div class="error-message" id="signup-error"></div>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    function togglePassword(fieldId) {
+      const input = document.getElementById(fieldId);
+      input.type = input.type === "password" ? "text" : "password";
+    }
+
+      const contactInput = document.getElementById("signup-contact");
+  contactInput.addEventListener("input", () => {
+    contactInput.value = contactInput.value.replace(/\D/g, "").slice(0, 10);
+  });
+  </script>
+</body>
+</html>

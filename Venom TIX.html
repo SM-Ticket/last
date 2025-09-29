@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeMotix | Select Tickets</title>
+    <link rel="stylesheet" href="TIX.css">
+    <link rel="icon" type="image/png" href="icon_favicon.png">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="wemotix_logo.png" alt="WeMotix Logo" class="weMotix-text">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="purchasehistory.html">History</a></li>
+                </ul>
+
+                 <button id="logout-btn">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main class="select-tickets-container">
+        <h2>Select Tickets</h2>
+        <div class="ticket-selection">
+            <div class="movie-info">
+                <img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/462637230_3436579009971116_1717716646880604985_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=BjxCMPnkmXoQ7kNvwGJJ_Nu&_nc_oc=AdmXJZuT2L8ClSGWL7TIH3mm-8tMns6Fd8jJKmMnTxLhEQrdDk44UrHkSGXnX5JrnDsApj7n5B8belKDD3NTav6X&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&oh=03_Q7cD3QE8Yz3rcITgnxy8_-x1-0cUmrz6XjMjof640ILVBW6cpA&oe=69021D98" alt="Movie Poster" class="movie-poster">
+                <div class="movie-details">
+                    <h3 class="movie-title">Venom: The Last Dance</h3>
+                    <p class="movie-time">Selected Time: None</p> 
+                    <p>Director's Club 1</p>
+                </div>
+            </div>
+            <div class="time-options">
+                <h3>Select a Time</h3>
+                <button class="time-btn" onclick="selectTime('3:00 PM')">3:00 PM</button>
+                <button class="time-btn" onclick="selectTime('8:00 PM')">8:00 PM</button>
+            </div>
+
+            <div class="ticket-options">
+                <h3>Standard</h3>
+                <div class="ticket-row">
+                    <span>DC POPCORN X DRINKS*</span>
+                    <span>₱600.00</span>
+                    <div class="quantity">
+                        <button onclick="updateQuantity(-1)">-</button>
+                        <input type="number" id="ticket-quantity" value="1" min="1" readonly>
+                        <button onclick="updateQuantity(1)">+</button>
+                    </div>
+                    <span id="total-amount">₱600.00</span>
+                </div>
+                <button class="next-btn" onclick="goToSeatSelection()">Next</button>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="ig.svg" alt="Instagram"></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="yt.svg" alt="YouTube"></a>
+            <a href="#"><img src="tiktok.svg" alt="TikTok"></a>
+        </div>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Conditions</a> |
+            <a href="privacy.html">Privacy Notice</a>
+        </div>
+        <p>&copy; 2025 WeMotix. All rights reserved.</p>
+    </footer>
+
+    <script>
+         y
+    function selectTime(time) {
+        document.querySelector(".movie-time").textContent = `Selected Time: ${time}`;
+    }
+
+    
+    function updateQuantity(change) {
+        const ticketPrice = 600; 
+        const quantityInput = document.getElementById("ticket-quantity");
+        const totalAmount = document.getElementById("total-amount");
+
+        
+        let quantity = parseInt(quantityInput.value) + change;
+        if (quantity < 1) quantity = 1; 
+        if (quantity > 10) quantity = 10; 
+        quantityInput.value = quantity;
+
+        
+        totalAmount.textContent = `₱${(quantity * ticketPrice).toFixed(2)}`;
+    }
+
+    
+    function goToSeatSelection() {
+        const quantity = document.getElementById("ticket-quantity").value;
+        const selectedTime = document.querySelector(".movie-time").textContent.replace("Selected Time: ", "").trim();
+        const movieName = document.querySelector(".movie-title").textContent.trim();
+
+        if (selectedTime === "None") {
+            alert("Please select a time before proceeding.");
+            return;
+        }
+
+        
+        const url = `select-seats.html?quantity=${quantity}&time=${encodeURIComponent(selectedTime)}&movie=${encodeURIComponent(movieName)}`;
+        console.log("Redirecting to:", url); 
+        location.href = url;
+    }
+    </script>
+</body>
+</html>
