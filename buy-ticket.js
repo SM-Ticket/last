@@ -44,7 +44,7 @@ function Beetlejuice(time) {
 function Mufasa(time) {
     const movieCard = event.target.closest(".movie-card");
     const movieTitle = movieCard.querySelector(".movie-title").textContent;
-    window.location.href = `Mufasa TIX.html?title=${encodeURIComponent(movieTitle)}&time=${encodeURIComponent(time)}`;
+    window.location.href = `Mufasa TIX .html?title=${encodeURIComponent(movieTitle)}&time=${encodeURIComponent(time)}`;
 }
 
 function Venom(time) {
