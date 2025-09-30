@@ -3,29 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const comingSoonContainer = document.getElementById("coming-soon-grid-container");
 
     const nowShowingMovies = [
-        { img: "captain.jpg", title: "Deathpool and wolverine" },
-        { img: "superman.png", title: "Inside Out 2" },
-        { img: "jw.png", title: "The Wild Robot" },
-        { img: "dragon.png", title: "Beetlejuice Beetlejuice" },
-        { img: "4.png", title: "Mufasa: The Lion King" },
-        { img: "untold.jpeg", title: "Venom: The Last Dance" },
-        { img: "balota.png", title: "Kraven the Hunter" },
-        { img: "care.png", title: "Afterburn" },
-        { img: "hla.png", title: "Minamahal" },
-        { img: "disapear.png", title: "One Battle After Another" }
+        { img: "https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg", title: "Deathpool & wolverine" },
+        { img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Inside_Out_2_poster.jpg/250px-Inside_Out_2_poster.jpg", title: "Inside Out 2" },
+        { img: "https://m.media-amazon.com/images/I/815jTw4n2ZL._UF1000,1000_QL80_.jpg", title: "The Wild Robot" },
+        { img: "https://play-lh.googleusercontent.com/Etkh88qovfK4Cwkn3rt1StrKSVS_9Iv1X6vr9d8IkSBX_J0Db4y4icatiy_nNXJcMO-VBfmwnhS6L-JoGEpq=w240-h480-rw", title: "Beetlejuice Beetlejuice" },
+        { img: "https://lumiere-a.akamaihd.net/v1/images/wonderwall_intl_payoff_poster_philippines_english_9f86c0fe.jpeg", title: "Mufasa: The Lion King" },
+        { img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQI1nNs4L2JhWNiQKmiYBYnhoqep5cEJVzp1PqecXhL89aJSmHz", title: "Venom: The Last Dance" },
+        { img: "https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/482533756_1188742672928892_4943216260943031034_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=g2ztzRcoWpAQ7kNvwEJONaY&_nc_oc=AdmNmHkpu36wvmnp_MrsJRaQonqaS4wWPeAFXSzK-NKa91UxmT5aM8p7-5-6Yc9RWZ7pX-aR0q-TQ1rDMlH3G5AW&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QEv8UB10HF5OFD1STON29pYfbi9zFqvgHQnifPfgJnsDw&oe=69022180", title: "Kraven the Hunter" },
+        { img: "https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/551132923_1752025425518749_2848970462013211813_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AaJi_f6vNDIQ7kNvwHsN8yJ&_nc_oc=AdkVcGhbASmC5iTYkqoTgCZ25_AfmH1Qggf3SlkHGG0VeSwPEHu4xI3fjqWXhd6bXpQbrLMglb5s0rifd-xrRZDp&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QHUIg26ka7Y5Tvb0af8iimbjKBAI-c5aVFNjGdoJ0h8NQ&oe=690203F7", title: "Afterburn" },
+        { img: "https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/548091345_1433925767897515_9177692878586081483_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=n6lDktsXBz0Q7kNvwHdDCud&_nc_oc=AdmSi6boS29Qg1MiydedJwzpdvxqrQC8xR4S_ce1X9OxpolEcLaFh1w38B5YqsJC-f6_JteqNR4qMmID7Nit-54E&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&oh=03_Q7cD3QEph5YY031Ar_minvccZ9tF3DCgdMbJ7p2DjvRK9ZjerQ&oe=69023147", title: "Minamahal" },
+        { img: "https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/552895418_806961905011154_3339892275471126328_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=OlEdJMPCcvMQ7kNvwFqNaef&_nc_oc=Adla_YOajdnHek0IxyjwSUcg73SbU_55Wt-dgrSckCTNivIsfPwwf5y0JW8f3FQiSB7ojeZRO4tl14jhD28b5yVd&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD3QHgwEiKSDA_ssRVWkzRJ_i8h-vytLE24UbljmF0hXA4Yg&oe=69021C20", title: "One Battle After Another" }
     ];
 
     const comingSoonMovies = [
-        { img: "coming1.png", title: "a Conjuring: Last Rites" },
-        { img: "coming2.png", title: "Black Bag" },
-        { img: "coming3.png", title: "Nouvelle Vague" },
-        { img: "coming4.png", title: "Ball Night" },
-        { img: "coming5.png", title: "The Long Walk" },
-        { img: "coming6.png", title: "Friendship Of 3 Crazy Girls" },
-        { img: "coming7.png", title: "Anaconda" },
-        { img: "coming8.png", title: "Avatar: Fire and Ash" },
-        { img: "coming9.png", title: "Manila’s Finest" },
-        { img: "coming10.png", title: "Call Me Mother" }
+        { img: "https://upload.wikimedia.org/wikipedia/en/b/bc/The_Conjuring_%E2%80%93_Last_Rites.jpg", title: "a Conjuring: Last Rites" },
+        { img: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Black_Bag_film_poster.jpg/250px-Black_Bag_film_poster.jpg", title: "Black Bag" },
+        { img: "https://m.media-amazon.com/images/M/MV5BZGUyNWRjMTMtYTgxZS00YWI4LTg2MDAtNzEwZDgyZjk4YzMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", title: "Nouvelle Vague" },
+        { img: "https://upload.wikimedia.org/wikipedia/en/4/4f/Shake%2C_Rattle_%26_Roll_Evil_Origins_poster.jpg", title: "Shake, Rattle & Roll: Evil Origins" },
+        { img: "https://m.media-amazon.com/images/M/MV5BZjkwYzE2OTQtNGZiZC00M2UyLWJjNTEtMTMxNDgwMzY1N2RkXkEyXkFqcGc@._V1_.jpg", title: "Five Nights at Freddy’s 2 " },
+        { img: "https://m.media-amazon.com/images/M/MV5BYzk0NjE4NzYtZjc5Ni00MTkxLTgyY2QtZjliOTA5N2U2YzM1XkEyXkFqcGc@._V1_.jpg", title: "TRON: Ares" },
+        { img: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p30027251_v_v10_aa.jpg", title: "Anaconda Cursed Jungle" },
+        { img: "https://lumiere-a.akamaihd.net/v1/images/p_studios_avatar_fireandash_payoff_poster_v1_32358b1e.jpeg", title: "Avatar: Fire and Ash" },
+        { img: "https://m.media-amazon.com/images/M/MV5BNTNhNmJhYzYtOWY0My00Nzc0LWJiYWQtNTk0NGViMjc5MjQ0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", title: "Manila’s Finest" },
+        { img: "https://image.tmdb.org/t/p/w500/uUzVqokTjXEwxMTMfeY7q1whWIP.jpg", title: "Call Me Mother" }
     ];
 
     function generateMovieCards(container, movies, isNowShowing) {
