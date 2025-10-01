@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         movie1: {
             title: "Deathpool and wolverine",
             description: "Sam Wilson, the new Captain America, finds himself in the middle of an international incident and must discover the motive behind a nefarious global plan.",
-            trailer: "https://youtu.be/73_1biulkYk?si=JzoU2b0tRCGXcaGW"
+            trailer: "blob:https://www.youtube.com/c1f60878-d3a3-4721-8470-cea59dfe154f"
         },
         movie2: {
             title: "Inside out 2",
