@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const comingSoonMovies = [
-        { img: "https://upload.wikimedia.org/wikipedia/en/b/bc/The_Conjuring_%E2%80%93_Last_Rites.jpg", title: "a Conjuring: Last Rites" },
+        { img: "https://dx35vtwkllhj9.cloudfront.net/cj-4dplex-korea/twice/images/regions/intl/onesheet.jpg", title: "ONE IN A MILLION" },
         { img: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Black_Bag_film_poster.jpg/250px-Black_Bag_film_poster.jpg", title: "Black Bag" },
         { img: "https://m.media-amazon.com/images/M/MV5BZGUyNWRjMTMtYTgxZS00YWI4LTg2MDAtNzEwZDgyZjk4YzMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", title: "Nouvelle Vague" },
         { img: "https://upload.wikimedia.org/wikipedia/en/4/4f/Shake%2C_Rattle_%26_Roll_Evil_Origins_poster.jpg", title: "Shake, Rattle & Roll: Evil Origins" },
@@ -94,53 +94,53 @@ document.addEventListener("DOMContentLoaded", function () {
     const movieData = {
         movie1: {
             title: "Deathpool and wolverine",
-            description: "Sam Wilson, the new Captain America, finds himself in the middle of an international incident and must discover the motive behind a nefarious global plan.",
-            trailer: "blob:https://www.youtube.com/c1f60878-d3a3-4721-8470-cea59dfe154f"
+            description: "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
+            trailer: "https://youtube.com/embed/73_1biulkYk?si=pj66v0iPvtPfUWDs"
         },
         movie2: {
             title: "Inside out 2",
-            description: "Follows the titular superhero as he reconciles his heritage with his human upbringing. He is the embodiment of truth, justice and the human way in a world that views this as old-fashioned.",
-            trailer: "https://youtu.be/LEjhY15eCx0?si=sDPxjGsv_Xf5elGH"
+            description: "talks about growing up in an emotional way and depicts how growing up is challenging inside our thoughts. The film introduces the emotions we had from the previous movie: Joy, Anger, Sadness, Fear and Disgust. We are also introduced to new emotions: embarrassment, Ennui (boredom), Envy and Anxiety",
+            trailer: "https://youtube.com/embed/LEjhY15eCx0?si=sDPxjGsv_Xf5elGH"
         },
         movie3: {
             title: "The wild robot",
-            description: "Five years post-Jurassic World Dominion, an expedition braves isolated equatorial regions to extract DNA from three massive prehistoric creatures for a groundbreaking medical breakthrough.",
-            trailer: "https://youtu.be/67vbA5ZJdKQ?si=HcYOpNNnmMu0sewm"
+            description: "The epic adventure follows the journey of a robot--ROZZUM unit 7134, Roz for short -- that is shipwrecked on an uninhabited island and must learn to adapt to the harsh surroundings, gradually building relationships with the animals on the island and becoming the adoptive parent of an orphaned gosling.",
+            trailer: "https://youtube.com/embed/67vbA5ZJdKQ?si=HcYOpNNnmMu0sewm"
         },
         movie4: {
             title: "Beetlejuice Beetlejuice",
-            description: "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.",
-            trailer: "https://youtu.be/As-vKW4ZboU?si=0XNWAF1r90B6zTw1"
+            description: "The story followed the Deetz family moving to Hawaii, where Charles is developing a resort. They soon discover that his company is building on the burial ground of an ancient Hawaiian Kahuna. The spirit comes back from the afterlife to cause trouble, and Betelgeuse becomes a hero by winning a surf contest with magic.",
+            trailer: "https://youtube.com/embed/As-vKW4ZboU?si=0XNWAF1r90B6zTw1"
         },
         movie5: {
             title: "Mufasa the lion king",
-            description: "Marvel's First Family face their most daunting challenge yet. Forced to balance their roles as heroes with the strength of their family bond, they must defend Earth from a ravenous space god called Galactus and his herald, Silver Surfer.",
-            trailer: "https://youtu.be/o17MF9vnabg?si=yka1z7cNGMIHH6Kd"
+            description: "A huge, powerful male lion, Mufasa was the King of the Pride Lands, father of Simba, and mate of Sarabi. He is shown to be a wise and fair ruler, who follows the Circle of Life. However, his brother Scar is jealous of Mufasa's position as king and forms a plan to kill Mufasa and Simba so he can be king.",
+            trailer: "https://youtube.com/embed/o17MF9vnabg?si=yka1z7cNGMIHH6Kd"
         },
         movie6: {
             title: "Venom the last dance",
-            description: "Unlike her past horror films, including Clarita (2019), which focused on supernatural elements, Untold explores the psychological horrors within human nature. It raises profound questions about morality, choices, and the sacrifices people are willing to make.",
-            trailer: "https://youtu.be/__2bjWbetsA?si=DCHGzG2RIz4ODovf"
+            description: "venom, the poisonous secretion of an animal, produced by specialized glands that are often associated with spines, teeth, stings, or other piercing devices. The venom apparatus may be primarily for killing or paralyzing prey or may be a purely defensive adaptation.",
+            trailer: "https://youtube.com/embed/__2bjWbetsA?si=DCHGzG2RIz4ODovf"
         },
         movie7: {
             title: "Kraven the hunter",
-            description: "A teacher pays an increasingly steep price for defending the democratic process of the election.",
-            trailer: "https://youtu.be/I8gFw4-2RBM?si=5mMW_MOmaC1g-8gX"
+            description: "Kraven is a master hunter and wild animal tamer, proficient in certain exotic animal-like fighting techniques, and an expert in various jungle herbs and potions. His nerve punch attack can paralyze even Spider-Man and Tigra.",
+            trailer: "https://youtube.com/embed/I8gFw4-2RBM?si=5mMW_MOmaC1g-8gX"
         },
         movie8: {
             title: "Afterburn",
-            description: " The eco-horror film centers on a fierce battle between two mothers, Audrey (Iza Calzado) and Lydia (Dimples Romana), over the ownership of a piece of land. Audrey, who hails from the city, arrives to claim the land her husband's family owns, while Lydia, the caretaker, fiercely protects the land her family has occupied for years.",
-            trailer: "https://youtu.be/ZkEjle729tI?si=SRjKLI_quCV8A7LG"
+            description: "After a massive solar flare destroys the Earth's eastern hemisphere, an emboldened treasure hunter for-hire adventures to Europe to uncover the coveted Mona Lisa, only to learn the world needs a hero more than it needs a painting.",
+            trailer: "https://youtube.com/embed/ZkEjle729tI?si=SRjKLI_quCV8A7LG"
         },
         movie9: {
             title: "Minamahal",
             description: "After fighting for their love to conquer the time, distance and a global shutdown that kept them apart, Joy and Ethan meet again in Canada but realize that they have also changed a lot, individually.",
-            trailer: "https://youtu.be/TU2npMg7TkM?si=ZmecWj_tG6UEwV5h"
+            trailer: "https://youtube.com/embed/oV-vNGppXLU?si=aUgeafUKbbJExVs9"
         },
         movie10: {
             title: "One battle after another",
-            description: "A woman who believes she's cursed meets a troubled landlord while fighting community displacement. As they grow closer, her fear that all her lovers disappear threatens their connection.",
-            trailer: "https://youtu.be/feOQFKv2Lw4?si=EAw5l5KKNiOSwTQC"
+            description: "“One Battle After Another” is loosely based on the 1990 novel “Vineland” by Thomas Pynchon. The novel is set in 1984 and follows a former hippie revolutionary and his daughter in a game of cat and mouse with a demented, insecure military official. The time period is ambiguous in the film, but it feels current.",
+            trailer: "https://youtube.com/embed/feOQFKv2Lw4?si=EAw5l5KKNiOSwTQC"
         }
     };
 
