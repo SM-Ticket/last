@@ -439,51 +439,50 @@ footer {
         box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
     }
 
-    /* Movie Details */
+    
     .movie-details {
-        flex: 1; /* Allow details to take up remaining space */
-        text-align: left; /* Align text to the left */
+        flex: 1; 
+        text-align: left; 
     }
 
     .movie-title {
-        font-size: 13px; /* Reduce title size */
+        font-size: 13px; 
         font-weight: bold;
         margin-bottom: 5px;
     }
 
     .movie-time {
-        font-size: 11px; /* Reduce time size */
+        font-size: 11px; 
         margin-bottom: 3px;
-        color: #ccc; /* Subtle text color */
+        color: #ccc; 
     }
 
-    /* Time Options */
+    
     .time-options {
         margin-top: 5px;
         display: flex;
-        justify-content: flex-start; /* Align buttons to the left */
-        gap: 5px; /* Reduce spacing between buttons */
+        justify-content: flex-start; 
+        gap: 5px; 
     }
 
     .time-btn {
-        font-size: 11px; /* Reduce button size */
-        padding: 4px 6px; /* Adjust padding */
+        font-size: 11px;
+        padding: 4px 6px; 
         border-radius: 4px;
     }
 
-    /* Ticket Options */
     .ticket-options {
-        margin-top: 8px; /* Reduce margin */
+        margin-top: 8px; 
     }
 
     .ticket-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 5px; /* Reduce padding */
-        background: #2a2a2a; /* Slightly lighter background for rows */
+        padding: 5px; 
+        background: #2a2a2a; 
         border-radius: 5px;
-        margin-bottom: 5px; /* Reduce spacing between rows */
+        margin-bottom: 5px; 
     }
 
     .quantity {
@@ -493,143 +492,138 @@ footer {
     }
 
     .quantity input {
-        width: 30px; /* Further reduce input width */
+        width: 30px; 
         text-align: center;
     }
 
-    /* Payment Section */
+   
     .payment-mode {
-        margin-top: 5px; /* Reduce margin */
-        font-size: 11px; /* Reduce font size */
-        text-align: left; /* Align text to the left */
+        margin-top: 5px;
+        font-size: 11px; 
+        text-align: left; 
     }
 
     .payment-mode p {
-        margin: 2px 0; /* Reduce spacing */
+        margin: 2px 0; 
     }
 
     .payment-mode strong {
-        font-size: 11px; /* Reduce font size */
+        font-size: 11px; 
     }
 
-    /* Next Button */
+    
     .next-btn {
-        width: 7%; /* Full width for better usability */
+        width: 7%; 
         text-align: center;
-        padding: 5px 8px; /* Further reduce padding */
-        font-size: 11px; /* Reduce font size */
-        margin-top: 8px; /* Reduce margin */
+        padding: 5px 8px; 
+        font-size: 11px; 
+        margin-top: 8px; 
     }
 }
 
 
 @media (max-width: 768px) {
-    /* General Styles */
     html, body {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 0 10px; /* Add padding for smaller screens */
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-        height: auto; /* Allow vertical scrolling */
+        font-size: 14px; 
+        padding: 0 10px; 
+        overflow-x: hidden; 
+        height: auto; 
     }
 
-    /* Navigation Bar */
     .nav-container {
-        flex-direction: column; /* Stack logo and links vertically */
-        align-items: center; /* Center align the content */
-        gap: 15px; /* Add spacing between logo and links */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 10px; /* Add spacing between links */
-        text-align: center; /* Center align the links */
+        flex-direction: column; 
+        gap: 10px; 
+        text-align: center; 
     }
 
     .nav-links li a {
-        padding: 10px 20px; /* Increase padding for better touch targets */
-        font-size: 16px; /* Adjust font size for readability */
-        width: 100%; /* Make links take full width */
-        display: block; /* Ensure links are block elements */
+        padding: 10px 20px; 
+        font-size: 16px; 
+        width: 100%; 
+        display: block; 
     }
 
-    /* Tickets Container */
+    
     .tickets-container {
-        width: 100%; /* Use full width for smaller screens */
-        margin: 20px auto; /* Adjust margins */
+        width: 100%; 
+        margin: 20px auto; 
     }
 
     h2 {
-        font-size: 22px; /* Adjust heading size */
-        text-align: center; /* Center align the heading */
+        font-size: 22px; 
+        text-align: center; 
     }
 
-    /* Movie Info */
     .movie-info {
-        flex-direction: column; /* Stack poster and details vertically */
-        align-items: center; /* Center align the content */
-        gap: 15px; /* Add spacing between poster and details */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
     }
 
     .movie-poster {
-        width: 100%; /* Full width for poster */
-        height: auto; /* Adjust height proportionally */
-        margin-bottom: 15px; /* Add spacing below the poster */
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 15px; 
     }
 
     .movie-details {
-        text-align: center; /* Center align the details */
+        text-align: center; 
     }
 
     .movie-title {
-        font-size: 20px; /* Adjust title size */
+        font-size: 20px; 
     }
 
     .movie-time {
-        font-size: 14px; /* Adjust time size */
+        font-size: 14px; 
     }
 
-    /* Time Options */
+   
     .time-options {
-        text-align: center; /* Center align the buttons */
+        text-align: center; 
     }
 
     .time-btn {
-        font-size: 14px; /* Adjust button size */
-        padding: 8px 12px; /* Adjust padding */
-        margin: 5px; /* Add spacing between buttons */
+        font-size: 14px; 
+        padding: 8px 12px; 
+        margin: 5px; 
     }
 
-    /* Ticket Options */
     .ticket-options {
         margin-top: 20px;
     }
 
     .ticket-row {
-        flex-direction: column; /* Stack content vertically */
-        align-items: flex-start; /* Align items to the left */
-        gap: 10px; /* Add spacing between elements */
-        padding: 15px; /* Adjust padding */
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+        padding: 15px; 
     }
 
     .quantity {
-        justify-content: space-between; /* Space out buttons and input */
-        width: 100%; /* Full width for better alignment */
+        justify-content: space-between; 
+        width: 100%; 
     }
 
     .quantity input {
-        width: 60px; /* Adjust input width */
+        width: 60px; 
     }
 
-    /* Next Button */
     .next-btn {
-        width: 100%; /* Full width for better usability */
-        text-align: center; /* Center align the text */
+        width: 100%; 
+        text-align: center; 
     }
 
-    /* Payment Mode */
+  
     .payment-mode {
-        font-size: 14px; /* Adjust font size */
-        text-align: center; /* Center align the text */
+        font-size: 14px; 
+        text-align: center; 
     }
 
     .payment-mode p {
@@ -637,21 +631,21 @@ footer {
     }
 
     .payment-mode strong {
-        font-size: 16px; /* Highlight the GCash number */
+        font-size: 16px; 
     }
 
     /* Footer */
     footer {
-        padding: 15px; /* Reduce footer padding */
+        padding: 15px; 
     }
 
     .social-icons img {
-        width: 30px; /* Reduce icon size */
-        margin: 5px; /* Adjust spacing */
+        width: 30px; 
+        margin: 5px; 
     }
 
     .footer-links a {
-        font-size: 14px; /* Reduce font size */
+        font-size: 14px; 
     }
 
      #logout-btn {

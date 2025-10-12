@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
         movie9: {
             title: "Minamahal",
             description: "After fighting for their love to conquer the time, distance and a global shutdown that kept them apart, Joy and Ethan meet again in Canada but realize that they have also changed a lot, individually.",
-            trailer: "https://youtube.com/embed/oV-vNGppXLU?si=aUgeafUKbbJExVs9"
+            trailer: "https://youtube.com/embed/q1qu6qgvLzw?si=lB1xsiOMheHN4VeM"
         },
         movie10: {
             title: "One battle after another",
